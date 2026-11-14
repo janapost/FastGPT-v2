@@ -1,6 +1,6 @@
 import { getNanoid } from '@fastgpt/global/common/string/tools';
 import fs from 'fs';
-import decompress from 'decompress';
+import decompress from '@xhmikosr/decompress';
 import { DOMParser } from '@xmldom/xmldom';
 import { clearDirFiles } from '../../common/file/utils';
 import { addLog } from '../../common/system/log';
