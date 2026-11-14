@@ -690,7 +690,7 @@ event取值：
 
 ```bash
 curl --location --request POST 'https://api.fastgpt.in/api/v1/chat/completions' \
---header 'Authorization: Bearer fastgpt-xxx' \
+--header 'Authorization: Bearer <your-api-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "stream": true,
@@ -715,7 +715,7 @@ curl --location --request POST 'https://api.fastgpt.in/api/v1/chat/completions' 
 
 ```bash
 curl --location --request POST 'https://api.fastgpt.in/api/v1/chat/completions' \
---header 'Authorization: Bearer fastgpt-xxxx' \
+--header 'Authorization: Bearer <your-api-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "stream": true,

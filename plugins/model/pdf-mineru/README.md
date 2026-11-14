@@ -80,6 +80,6 @@ python pdf_parser_mineru.py
 
 ```bash
 curl --location --request POST "http://localhost:7231/v1/parse/file" \
---header "Authorization: Bearer your_access_token" \
+--header "Authorization: Bearer <your_access_token>" \
 --form "file=@./file/chinese_test.pdf"
 ```
