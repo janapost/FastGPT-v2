@@ -11,6 +11,11 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: isDev ? false : true,
   compress: true,
+  // Security (T-17): next@14.2.x has no fix for Image Optimization API RCE
+  // (GHSA-2464-fhr4-w9xw, GHSA-2xp9-vwfh-vxw4). Disable /_next/image until migration to Next >=15.5.28.
+  images: {
+    unoptimized: true
+  },
   webpack(config, { isServer, nextRuntime }) {
     Object.assign(config.resolve.alias, {
       '@mongodb-js/zstd': false,
