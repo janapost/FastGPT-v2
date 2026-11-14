@@ -402,7 +402,7 @@ curl 例子：
 
 ```bash
 curl --location --request POST 'https://domain/v1/embeddings' \
---header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Authorization: Bearer <your-sk-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "model": "m3e",
@@ -412,7 +412,7 @@ curl --location --request POST 'https://domain/v1/embeddings' \
 
 ```bash
 curl --location --request POST 'https://domain/v1/chat/completions' \
---header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Authorization: Bearer <your-sk-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "model": "chatglm2",
@@ -420,7 +420,7 @@ curl --location --request POST 'https://domain/v1/chat/completions' \
 }'
 ```
 
-Authorization 为 sk-aaabbbcccdddeeefffggghhhiiijjjkkk。model 为刚刚在 One API 填写的自定义模型。
+Authorization 为上文设置的安全凭证 sk-key（默认值见上文），示例中以 <your-sk-key> 代替。model 为刚刚在 One API 填写的自定义模型。
 
 ## 接入 FastGPT
 
@@ -564,7 +564,7 @@ curl 例子：
 
 ```bash
 curl --location --request POST 'https://domain/v1/chat/completions' \
---header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Authorization: Bearer <your-sk-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "model": "chatglm2",
@@ -572,7 +572,7 @@ curl --location --request POST 'https://domain/v1/chat/completions' \
 }'
 ```
 
-Authorization 为 sk-aaabbbcccdddeeefffggghhhiiijjjkkk。model 为刚刚在 One API 填写的自定义模型。
+Authorization 为上文设置的安全凭证 sk-key（默认值见上文），示例中以 <your-sk-key> 代替。model 为刚刚在 One API 填写的自定义模型。
 
 ## 接入 FastGPT
 
@@ -3930,7 +3930,7 @@ event取值：
 
 ```bash
 curl --location --request POST 'https://api.fastgpt.in/api/v1/chat/completions' \
---header 'Authorization: Bearer fastgpt-xxx' \
+--header 'Authorization: Bearer <your-api-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "stream": true,
@@ -3955,7 +3955,7 @@ curl --location --request POST 'https://api.fastgpt.in/api/v1/chat/completions' 
 
 ```bash
 curl --location --request POST 'https://api.fastgpt.in/api/v1/chat/completions' \
---header 'Authorization: Bearer fastgpt-xxxx' \
+--header 'Authorization: Bearer <your-api-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "stream": true,
@@ -5538,7 +5538,7 @@ data 为集合的 ID。
 
 ```bash
 curl --location --request POST 'http://localhost:3000/api/core/dataset/collection/create/apiCollection' \
---header 'Authorization: Bearer fastgpt-xxx' \
+--header 'Authorization: Bearer <your-api-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "A Quick Guide to Building a Discord Bot.pdf",
@@ -10642,7 +10642,7 @@ FastGPT 提供如下标准接口支持：
 
 ```bash
 curl -X GET "https://redict.example/login/oauth/getAuthURL?redirect_uri=xxx&state=xxxx" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
@@ -10687,7 +10687,7 @@ curl -X GET "https://redict.example/login/oauth/getAuthURL?redirect_uri=xxx&stat
 
 ```bash
 curl -X GET "https://oauth.example/login/oauth/getUserInfo?code=xxxxxx" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
@@ -10732,7 +10732,7 @@ curl -X GET "https://oauth.example/login/oauth/getUserInfo?code=xxxxxx" \
 
 ```bash
 curl -X GET "https://example.com/org/list" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
@@ -10789,7 +10789,7 @@ type OrgListResponseType = {
 
 ```bash
 curl -X GET "https://example.com/user/list" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 

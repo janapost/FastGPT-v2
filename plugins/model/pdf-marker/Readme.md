@@ -104,13 +104,13 @@ marker v0.2：用Post方法访问端口为 `7321 ` 的 `v2/parse/file` 服务
    - v0.2
       ```
       curl --location --request POST "http://localhost:7231/v2/parse/file" \
-      --header "Authorization: Bearer your_access_token" \
+      --header "Authorization: Bearer <your_access_token>" \
       --form "file=@./file/chinese_test.pdf"
       ```
   - v0.1
       ```
       curl --location --request POST "http://localhost:7231/v1/parse/file" \
-      --header "Authorization: Bearer your_access_token" \
+      --header "Authorization: Bearer <your_access_token>" \
       --form "file=@./file/chinese_test.pdf"
       ```
       

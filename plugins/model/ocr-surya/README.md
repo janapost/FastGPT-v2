@@ -54,7 +54,7 @@ python app.py
 
 ```python
 curl --location --request POST 'http://localhost:7230/v1/ocr/text' \
---header 'Authorization: Bearer your_access_token' \
+--header 'Authorization: Bearer <your_access_token>' \
 --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
 --header 'Content-Type: application/json' \
 --data-raw '{

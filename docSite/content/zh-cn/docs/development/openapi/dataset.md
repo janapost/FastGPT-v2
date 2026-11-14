@@ -580,7 +580,7 @@ data 为集合的 ID。
 
 ```bash
 curl --location --request POST 'http://localhost:3000/api/core/dataset/collection/create/apiCollection' \
---header 'Authorization: Bearer fastgpt-xxx' \
+--header 'Authorization: Bearer <your-api-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "A Quick Guide to Building a Discord Bot.pdf",

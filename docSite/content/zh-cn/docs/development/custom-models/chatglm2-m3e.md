@@ -37,7 +37,7 @@ curl 例子：
 
 ```bash
 curl --location --request POST 'https://domain/v1/embeddings' \
---header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Authorization: Bearer <your-sk-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "model": "m3e",
@@ -47,7 +47,7 @@ curl --location --request POST 'https://domain/v1/embeddings' \
 
 ```bash
 curl --location --request POST 'https://domain/v1/chat/completions' \
---header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Authorization: Bearer <your-sk-key>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "model": "chatglm2",
@@ -55,7 +55,7 @@ curl --location --request POST 'https://domain/v1/chat/completions' \
 }'
 ```
 
-Authorization 为 sk-aaabbbcccdddeeefffggghhhiiijjjkkk。model 为刚刚在 One API 填写的自定义模型。
+Authorization 为上文设置的安全凭证 sk-key（默认值见上文），示例中以 <your-sk-key> 代替。model 为刚刚在 One API 填写的自定义模型。
 
 ## 接入 FastGPT
 

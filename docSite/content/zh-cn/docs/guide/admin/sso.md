@@ -323,7 +323,7 @@ fastgpt-sso:
 3. 获取用户信息的地址，需要传入 access_token 例如：`http://example.com/oauth/user_info`
     ```bash
     curl -X GET\
-        -H "Authorization: Bearer 4/P7qD2qAz4"\
+        -H "Authorization: Bearer <access_token>"\
         "http://example.com/oauth/user_info"
     ```
     注意： access_token 作为 Authorization 头部传入, 格式为 Bearer xxxx
@@ -396,7 +396,7 @@ FastGPT 提供如下标准接口支持：
 
 ```bash
 curl -X GET "https://redict.example/login/oauth/getAuthURL?redirect_uri=xxx&state=xxxx" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
@@ -441,7 +441,7 @@ curl -X GET "https://redict.example/login/oauth/getAuthURL?redirect_uri=xxx&stat
 
 ```bash
 curl -X GET "https://oauth.example/login/oauth/getUserInfo?code=xxxxxx" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
@@ -486,7 +486,7 @@ curl -X GET "https://oauth.example/login/oauth/getUserInfo?code=xxxxxx" \
 
 ```bash
 curl -X GET "https://example.com/org/list" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
@@ -543,7 +543,7 @@ type OrgListResponseType = {
 
 ```bash
 curl -X GET "https://example.com/user/list" \
--H "Authorization: Bearer your_token_here" \
+-H "Authorization: Bearer <your_token>" \
 -H "Content-Type: application/json"
 ```
 
